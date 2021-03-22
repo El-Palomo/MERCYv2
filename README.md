@@ -76,5 +76,5 @@ Host script results:
 - Llama la atención TCP/80 y TCP/22 que aparecen como FILTERED. Un probable PORT KNOCKING.
 
 
-<
+<img src="https://github.com/El-Palomo/MERCYv2/blob/main/mercy1.jpg" width=80% />
 
