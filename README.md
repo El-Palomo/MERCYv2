@@ -437,10 +437,10 @@ Saved as: webshell.war
 | fluffy|freakishfluffybunny |
 | qiu|password |
 
+- Después de haber buscado un largo momento y haber probado diferentes técnicas, encontré un archivo importante con MUCHOS PERMISOS y que le pertenece al usuario ROOT.
+- Ingresamos con el usuario fluffy:freakishfluffybunny y encontramos el archivo TIMECLOCK
 
-
-
-
+<img src="https://github.com/El-Palomo/MERCYv2/blob/main/mercy19.jpg" width=80% />
 
 
 
