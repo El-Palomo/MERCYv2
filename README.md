@@ -428,10 +428,14 @@ Saved as: webshell.war
 
 ## 5. Elevando Privilegios
 
+- Toca buscar con paciencia. No olvidemos las contraseñas que hemos obtenido hasta ahora:
 
 
-
-
+| Usuario | Password |
+| -- | -- | 
+| thisisasuperduperlonguser|heartbreakisinevitable |
+| fluffy|freakishfluffybunny |
+| qiu|password |
 
 
 
